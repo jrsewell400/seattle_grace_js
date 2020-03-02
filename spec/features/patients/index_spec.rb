@@ -13,7 +13,7 @@ RSpec.describe "Patient Index Page", type: :feature do
 
       patient_1 = Patient.create!(name: "Nova", age: "70")
       patient_2 = Patient.create!(name: "Luna", age: "25")
-      patient_3 = Patient.create!(name: "Ricard", age: "51")
+      patient_3 = Patient.create!(name: "Richard", age: "51")
       patient_4 = Patient.create!(name: "Carol", age: "50")
 
       DoctorPatient.create!(doctor: doctor_1, patient: patient_1)
@@ -23,10 +23,12 @@ RSpec.describe "Patient Index Page", type: :feature do
 
       visit "/patients"
 
-      expect(page).to have_content("Luna - 25")
-      expect(page).to have_content("Carol - 50")
-      expect(page).to have_content("Richard - 51")
-      expect(page).to have_content("Nova - 70")
+      within ".patients" do 
+        expect(page.all('li')[0]).to have_content("Luna")
+        expect(page.all('li')[1]).to have_content("Carol")
+        expect(page.all('li')[2]).to have_content("Richard")
+        expect(page.all('li')[3]).to have_content("Nova")
+      end 
     end 
   end 
 end 

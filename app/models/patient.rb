@@ -4,6 +4,6 @@ class Patient <ApplicationRecord
   has_many :doctors, through: :doctor_patients
 end
 
-def self.list_patients
+def self.order_age
   order(:age)
 end

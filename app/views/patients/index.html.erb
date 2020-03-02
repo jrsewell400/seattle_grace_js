@@ -2,5 +2,9 @@
 
 <h2>List of Patients</h2>
   <% @patients.each do |patient| %>
-    <%= patient.list_patient %></br>
+      <ul>
+    <section id="patients">
+        <li><%= patient.name%></li>
+    </section>
+      </ul>
   <% end %>
