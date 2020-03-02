@@ -23,7 +23,7 @@ RSpec.describe "Patient Index Page", type: :feature do
 
       visit "/patients"
 
-      within ".patients" do 
+      within "#patients" do 
         expect(page.all('li')[0]).to have_content("Luna")
         expect(page.all('li')[1]).to have_content("Carol")
         expect(page.all('li')[2]).to have_content("Richard")

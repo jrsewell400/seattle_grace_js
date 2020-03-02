@@ -1,10 +1,10 @@
 <h1>PATIENT INDEX PAGE</h1>
 
 <h2>List of Patients</h2>
-  <% @patients.each do |patient| %>
-      <ul>
-    <section id="patients">
-        <li><%= patient.name%></li>
-    </section>
-      </ul>
-  <% end %>
+  <section id="patients">
+    <% @patients.each do |patient| %>
+        <ul>
+          <li><%= patient.name %></li>
+        </ul>
+    <% end %>
+  </section>
