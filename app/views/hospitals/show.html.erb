@@ -1,0 +1,12 @@
+<h1>HOSPITAL SHOW PAGE</h2></br></br>
+
+Hospital Name: <%= @hospital.name %></br>
+Number of Doctors: <%= @hospital.doctors.count %></br></br>
+
+List of Universities:
+
+<% @hospital.doctors.each do |doctor| %>
+  <%= doctor.list_unis %></br>
+<% end %>
+
+
