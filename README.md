@@ -46,7 +46,7 @@ I see all of that doctor's information including:
 And I see the name of the hospital where this doctor works
 And I see the names of all of the patients this doctor has
 ```
-​
+​@doct
 ```
 User Story 2, Patient Index Page
 ​
