@@ -3,10 +3,9 @@
 Hospital Name: <%= @hospital.name %></br>
 Number of Doctors: <%= @hospital.doctors.count %></br></br>
 
-List of Universities:
-
-<% @hospital.doctors.each do |doctor| %>
-  <%= doctor.list_unis %></br>
+List of Universities:</br>
+<% @doctors.each do |doctor| %>
+  <%= doctor.university %></br>
 <% end %>
 
 
