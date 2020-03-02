@@ -24,7 +24,6 @@ RSpec.describe "Hospital Show Page", type: :feature do
 
       expect(page).to have_content("IU Health")
       expect(page).to have_content("Number of Doctors: 3")
-      save_and_open_page
       expect(page).to have_content("IU")
       expect(page).to have_content("Brown") 
     end 
