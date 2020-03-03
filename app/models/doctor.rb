@@ -5,6 +5,3 @@ class Doctor <ApplicationRecord
   has_many :patients, through: :doctor_patients
 end
 
-# def list_unis
-#   select('university').unique
-# end

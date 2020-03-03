@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Patient Index Page", type: :feature do 
   describe " - when I visit a patient's index page" do 
-    it "then I the doctors information, the hospital the doctor works at, and the name of doctor's patients." do 
+    it "then I see the names of all patients listed from oldest to youngest" do 
       hospital_1 = Hospital.create!(name: "IU Health")
       hospital_2 = Hospital.create!(name: "Eskenazi Health")
 
@@ -24,10 +24,10 @@ RSpec.describe "Patient Index Page", type: :feature do
       visit "/patients"
 
       within "#patients" do 
-        expect(page.all('li')[0]).to have_content("Luna")
-        expect(page.all('li')[1]).to have_content("Carol")
-        expect(page.all('li')[2]).to have_content("Richard")
-        expect(page.all('li')[3]).to have_content("Nova")
+        expect(page.all('li')[0]).to have_content("Nova")
+        expect(page.all('li')[1]).to have_content("Richard")
+        expect(page.all('li')[2]).to have_content("Carol")
+        expect(page.all('li')[3]).to have_content("Luna")
       end 
     end 
   end 

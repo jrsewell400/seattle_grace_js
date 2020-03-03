@@ -28,8 +28,8 @@ RSpec.describe "Hospital Show Page", type: :feature do
       expect(page).to have_content("Brown") 
     end 
   end 
-end 
-    
+end
+
 # As a visitor
 # When I visit a hospital's show page
 # I see the hospital's name
